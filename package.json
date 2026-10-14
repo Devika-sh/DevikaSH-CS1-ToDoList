@@ -1,0 +1,11 @@
+{
+  "name": "simple-mern-todo",
+  "private": true,
+  "workspaces": ["backend", "frontend"],
+  "scripts": {
+    "start": "concurrently -k -n API,WEB \"npm start -w backend\" \"npm start -w frontend\"",
+    "build": "npm run build -w frontend",
+    "test": "npm test -w backend"
+  },
+  "devDependencies": {"concurrently": "^9.1.2"}
+}
